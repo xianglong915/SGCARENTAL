@@ -1,6 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
-import Navbar from './components/Navbar';
+import Navbar from '../src/components/Navbar';
+import ProductScreen from './screens/ProductScreen';
 
 
 
@@ -10,8 +11,10 @@ function App() {
     <Router>
       <Navbar />
       <main>
-        {/* <Routes></Routes> */}
-
+        <Routes>
+        <Route path='/products' element={<ProductScreen />}>
+        </Route>
+        </Routes>
       </main>
     </Router>
   </ChakraProvider>
