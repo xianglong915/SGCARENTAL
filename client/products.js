@@ -1,13 +1,13 @@
 export const products = [
   {
     _id: '621235e59540445b3sdfe9s0',
-    name: 'Toyota Noah 1.8 Hybrid',
-    image: '/images/noah1.jpg',
+    name: 'Samsung Galaxy Z Flip4 5G',
+    image: '/images/flip.jpg',
     description:
       "Introducing Samsung Galaxy Z Flip4. Fold it, flip it, stand it. Capture photos and videos hands-free with a camera designed to stand on its own with revolutionary folding glass or get that quick selfie when folded for moments that can't wait. ",
     brand: 'Apple',
     category: 'Electronics',
-    price: 115,
+    price: 599.99,
     rating: 5,
     numReviews: 1,
     isNew: true,
@@ -16,15 +16,15 @@ export const products = [
   },
   {
     _id: '636985e59540445b3c45e6af',
-    name: 'Nissan Serena e-Power',
-    image: '/images/serena3.jpg',
+    name: 'iPhone 11 Pro 256GB Memory',
+    image: '/images/iphone.jpg',
     description:
       'Shoot 4K video, beautiful portraits and sweeping landscapes with the all-new dual-camera system. Capture your best low-light photos with Night mode. See true-to-life colour in your photos, videos and games on the 6.1-inch Liquid Retina display.3 Experience unprecedented performance with A13 Bionic for gaming, augmented reality and photography',
     brand: 'Cannon',
     category: 'Electronics',
-    price: 110,
-    rating: 5,
-    numReviews: 4,
+    price: 929.99,
+    rating: 3,
+    numReviews: 1,
     isNew: false,
 
     reviews: [],
