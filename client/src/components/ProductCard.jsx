@@ -1,14 +1,14 @@
 import React from 'react'
 import {Flex,Circle,Box,Image,useColorModeValue, Badge,Icon,Button,Tooltip,Stack,Link,HStack,Text} from '@chakra-ui/react'
 
-import {products} from '../products';
+import { products } from '../'
 import {FiShoppingCart} from 'react-icons/fi';
 import {Center,Wrap,WrapItem} from '@chakra-ui/react';
 import {Link as ReactLink} from 'react-router-dom';
 import {StarIcon} from '@chakra-ui/icons';
 import {useState} from 'react';
 
-const Rating = ({rating,numReviews}) => {
+const Rating = ({rating,numberOfReviews}) => {
    const {iconSize} = useState('14px')
    return (
     <Flex>
@@ -20,7 +20,7 @@ const Rating = ({rating,numReviews}) => {
          <StarIcon size={iconSize} w='14px' color={rating>=5 ? 'orange.500' :'gray.200'} />
       </HStack>
       <Text fontSize='md' fontWeight='bold' ml='px'>
-        {`${numReviews} ${numReviews>1? 'Reviews' : 'Review'}`}
+        {`${numberOfReviews} ${numberOfReviews>1? 'Reviews' : 'Review'}`}
       </Text>
     </Flex>
    )
@@ -29,7 +29,7 @@ const Rating = ({rating,numReviews}) => {
 const ProductCard = ({product}) => {
   return (
     <Stack p='2' spacing='3px' bg={useColorModeValue('white','gray.800')} minW='240px' h='450px' borderWith='1px' rounded='lg' shadow='lg' position='relative'>
-       {product.isNew && <Circle size='10px' position='absolute' top={2} right={2} bg='green.300'/>}
+       {product.productIsNew && <Circle size='10px' position='absolute' top={2} right={2} bg='green.300'/>}
        {product.stock <=0 && <Circle size='10px' position='absolute' top={2} right={2} bg='red.300'/>}
        <Image src={product.image} alt={product.name} roundedTop='lg' />
        <Box flex='1' maxH='5' alignItems='baseline'>
@@ -38,7 +38,7 @@ const ProductCard = ({product}) => {
             Sold out
             </Badge>
          )}
-         {product.isNew && (
+         {product.productIsNew && (
           <Badge rounded='full' px='2' fontSize='0.8em' colorScheme='green'>
             New
             </Badge>
@@ -52,7 +52,7 @@ const ProductCard = ({product}) => {
             </Link>
        </Flex>
        <Flex justifyContent='space-between' alignContent='center' py='2'>
-        <Rating rating={product.rating} numReviews={product.numReviews} />
+        <Rating rating={product.rating} numberOfReviews={product.numberOfReviews} />
        </Flex>
        <Flex justify='space-between' >
           <Box fontSize='2xl' color={useColorModeValue('gray.800','white')}>
