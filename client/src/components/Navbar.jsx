@@ -5,7 +5,7 @@ import {GiTechnoHeart} from 'react-icons/gi';
 
 const links =[
     {linkName:'Products',path:'/products'},
-    {linkName:'Shopping',path:'/cart'}
+    {linkName:'Shopping Cart',path:'/cart'}
 ]
 
 const NavLink = ({path,children})=>(
